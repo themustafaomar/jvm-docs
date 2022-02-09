@@ -1,0 +1,34 @@
+{
+  "name": "vue3",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview ./dist/index.html",
+    "build:ssg": "vite-ssg build SSG --script sync"
+  },
+  "dependencies": {
+    "@badrap/bar-of-progress": "^0.1.2",
+    "jsvectormap": "^1.4.4",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-attrs": "^4.1.3",
+    "markdown-it-prism": "^2.2.2",
+    "markdown-it-table-of-contents": "^0.6.0",
+    "postcss": "^8.4.5",
+    "prismjs": "^1.26.0",
+    "sass": "^1.49.0",
+    "string": "^3.3.3",
+    "tailwindcss": "^3.0.12",
+    "vite": "^2.7.12",
+    "vite-plugin-md": "^0.11.7",
+    "vite-ssg": "^0.17.6",
+    "vue-router": "^4.0.12"
+  }
+}
