@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview ./dist/index.html",
+    "preview": "vite preview --config ./vite.p.js",
     "build:ssg": "vite-ssg build SSG --script sync"
   },
   "dependencies": {
