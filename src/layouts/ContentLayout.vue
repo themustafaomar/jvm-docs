@@ -17,7 +17,7 @@
               <h6 class="text-sm font-bold text-blue-500 mb-3">{{ $route.meta.section }}</h6>
               <h1 class="text-3xl font-bold capitalize">{{ frontmatter.title }}</h1>
             </div>
-            <a :href="`https://github.com/themustafaomar/jvm-docs/tree/dev${$route.path}.md`" class="flex items-center font-semibold text-gray-400 decoration-none text-xs">
+            <a :href="`https://github.com/themustafaomar/jvm-docs/tree/main${$route.path}.md`" class="flex items-center font-semibold text-gray-400 decoration-none text-xs">
               Edit this page
               <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
