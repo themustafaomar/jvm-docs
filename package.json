@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
+    "@vueuse/head": "^0.7.5",
     "jsvectormap": "^1.4.4",
     "vue": "^3.2.25"
   },

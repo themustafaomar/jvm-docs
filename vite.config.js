@@ -29,6 +29,10 @@ export default defineConfig({
         md.use(prism)
         md.use(toc, { includeLevel: [1, 2, 3] })
         md.use(anchor, {
+          slugify: s => string(s).slugify().toString(),
+          callback(token) {
+            token.attrPush(['class', 'heading group relative flex items-center capitalize -ml-4 pl-4'])
+          },
           permalink: anchor.permalink.linkInsideHeader({
             symbol: `
               <div aria-hidden="true" class="absolute items-center group-hover:flex hidden mr-1 -left-2 top-0 bottom-0 m-auto">
@@ -38,10 +42,6 @@ export default defineConfig({
               </div>`,
             placement: 'before',
           }),
-          callback(token) {
-            token.attrPush(['class', 'heading group relative flex items-center capitalize -ml-4 pl-4'])
-          },
-          slugify: s => string(s).slugify().toString()
         })
       }
     })
