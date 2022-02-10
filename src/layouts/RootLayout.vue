@@ -8,6 +8,5 @@ body {
   background-image: url(/images/lines.svg);
   background-repeat: repeat;
   background-position: center;
-  /* background-attachment: fixed; */
 }
 </style>

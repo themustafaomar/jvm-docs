@@ -25,7 +25,6 @@
 import Navbar from '../components/Navbar.vue'
 
 const mapOptions = {
-  map: 'world_merc',
   zoomOnScroll: false,
   markers: [
     { name: "Russia", coords: [61.524, 105.3188] },
