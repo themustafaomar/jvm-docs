@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview --config ./vite.p.js",
-    "build:ssg": "vite-ssg build SSG --script sync"
+    "build:ssg": "vite-ssg build"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
