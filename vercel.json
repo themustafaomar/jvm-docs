@@ -1,3 +1,8 @@
 {
-  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+  "builds": [
+    { "src": "./dist/**", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "dist/$1" }
+  ]
 }
