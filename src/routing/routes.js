@@ -17,5 +17,9 @@ export default [
       path: `/docs/${page.to}`,
       component: () => import(`../../docs/${page.to}.md`),
       meta: { section: page.section }
-    }))
+    })),
+  {
+    path: '/:other*',
+    component: () => import('../pages/404.vue')
+  }
 ]

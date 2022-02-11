@@ -6,10 +6,6 @@ export default {
       default: () => options,
     }
 
-    // app.config.globalProperties.$jvm = (key) => {
-    //   console.log(key);
-    // }
-
     app.component('vectorMap', VectorMapComponent)
   }
 }

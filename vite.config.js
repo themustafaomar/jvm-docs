@@ -51,5 +51,8 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    includedRoutes(paths) {
+      return paths.map(path => path.startsWith('/:other') ? '/404' : path)
+    }
   }
 })
