@@ -22,7 +22,18 @@
 </template>
 
 <script setup>
+import { useHead } from '@vueuse/head'
 import Navbar from '../components/Navbar.vue'
+
+const content = 'Jsvectormap is a lightweight JavaScript library for creating interactive maps and pretty data visualization, supports all modern brownsers including IE9+.'
+
+useHead({
+  meta: [
+    { name: 'description', content },
+    { property: 'og:title', content: 'Jsvectormap' },
+    { property: 'og:description', content },
+  ],
+})
 
 const mapOptions = {
   map: 'world_merc',
