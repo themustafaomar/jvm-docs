@@ -4,7 +4,7 @@
     "silent": true
   },
   "rewrites": [{
-    "source": "/(.*)",
-    "destination": "/api"
+    "source": "/:path*",
+    "destination": "/:path.html"
   }]
 }
