@@ -9,8 +9,8 @@ If you're using `webpack` or any module bundler, you need to import the map you 
 **Notice**: We're using `world_merc` in the docs not `world` map.
 
 ```javascript
-@import 'jsvectormap'
-@import 'jsvectormap/dist/maps/world'
+import jsVectorMap from 'jsvectormap'
+import 'jsvectormap/dist/maps/world'
 
 const map = new jsVectorMap({
   selector: '#map',
