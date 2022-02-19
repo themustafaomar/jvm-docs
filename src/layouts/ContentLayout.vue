@@ -6,7 +6,7 @@
     }">
   </navbar>
 
-  <div class="max-w-[90rem] mx-auto relative px-6 md:px-8">
+  <div class="max-w-[90rem] mx-auto relative px-6 md:px-9">
     <sidebar />
 
     <article class="my-4 md:my-8">

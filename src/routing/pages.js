@@ -13,11 +13,11 @@ export default [{
     name: 'Available maps',
     to: 'available-maps',
   }, {
-    name: 'Data visualization',
-    to: 'data-visualization'
-  }, {
     name: 'Browser Support',
     to: 'browser-support'
+  }, {
+    name: 'Modern frameworks',
+    to: 'modern-frameworks'
   }, {
     name: 'Change log',
     to: 'changelog',
@@ -45,6 +45,9 @@ export default [{
   }, {
     name: 'The events config',
     to: 'events',
+  }, {
+    name: 'The data visualization',
+    to: 'data-visualization'
   }]
 }, {
   name: 'Other links',
