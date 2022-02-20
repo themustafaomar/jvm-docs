@@ -1,6 +1,6 @@
 ---
 title: 'Modern frameworks'
-description: This section provides infromation about how to use jsvectormap with the modern frameworks like Vue and how to handle SSR issues.
+description: This section covers the most ways to use jsvectormap with the modern frameworks like Vue and how to handle SSR issues.
 ---
 
 ## Vuejs
@@ -12,7 +12,7 @@ Let's start with global registration, in `app.js`.
 ```js
 import Vue from 'vue'
 import jsVectorMap from 'jsvectormap'
-import worldMap from 'jsvectormap/dist/maps/world-merc'
+import 'jsvectormap/dist/maps/world-merc'
 
 window.jsVectorMap = jsVectorMap
 
