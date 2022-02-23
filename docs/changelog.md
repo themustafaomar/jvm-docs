@@ -3,7 +3,14 @@ title: 'Changelog'
 description: Discover all the release notes for the Jsvectormap.
 ---
 
-## v1.4.4 (latest)
+## v1.4.5 (latest)
+
+- fix: jsvectormap constructor is not accessible ([#69](https://github.com/themustafaomar/jsvectormap/issues/69))
+- refactor: drop webpack development server
+- docs: import typo
+- fix: touch events
+
+## v1.4.4
 
 - fix: lines position fail when zooming in/out ([#63](https://github.com/themustafaomar/jsvectormap/issues/63))
 

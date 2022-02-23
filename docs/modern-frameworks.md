@@ -14,8 +14,6 @@ import Vue from 'vue'
 import jsVectorMap from 'jsvectormap'
 import 'jsvectormap/dist/maps/world-merc'
 
-window.jsVectorMap = jsVectorMap
-
 const app = new Vue({...})
 ```
 
@@ -71,8 +69,6 @@ In `@/plugins/jsvectormap.js`
 import jsVectorMap from 'jsvectormap'
 import 'jsvectormap/dist/maps/jvm-world-merc'
 import 'jsvectormap/dist/css/jsvectormap.css'
-
-window.jsVectorMap = jsVectorMap
 
 // Or you can inject `jsVectorMap` constructor instead of window.
 export default function (ctx, inject) {
