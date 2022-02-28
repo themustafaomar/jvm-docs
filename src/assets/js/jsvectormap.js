@@ -241,7 +241,7 @@
 
   var Defaults = {
     map: 'world',
-    backgroundColor: 'tranparent',
+    backgroundColor: 'transparent',
     draggable: true,
     zoomButtons: true,
     zoomOnScroll: true,
