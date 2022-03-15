@@ -64,6 +64,30 @@ const map = new jsVectorMap({
 })
 ```
 
+#### Tooltip instance
+
+The tooltip also was a `DomHandler` instance, now it's a `Tooltip` instance which implements these methods `getElement`, `show`, `hide`, `text`, `css`.
+
+```js
+const map = new jsVectorMap({
+  // ...
+  onMarkerTooltipShow(tooltip, index) {
+    // ❌ Won't work anymore.
+    const element = tooltip.selector
+
+    // Do something with the tooltip DOM element..
+
+    // ✅ If you need the tooltip DOM element, you can access it like so:
+    const element = tooltip.getElement()
+
+    // Do something with the tooltip DOM element, or..
+    // tooltip.css({ backgroundColor: 'red' })
+    // tooltip.text('Hello')
+  },
+  // ...
+})
+```
+
 ## v1.3.3
 
 - fix: dragging the map selects the region (#48)
