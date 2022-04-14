@@ -51,9 +51,10 @@ const map = new jsVectorMap({
 | `clearSelectedMarkers` | Clear the selected `markers` | `None` | [@example](/docs/markers#clear-selected-markers) |
 | `addMarkers` | Add a new marker or array of markers | [`Object` \| `Array`] | [@example](/docs/markers#adding-new-markers) |
 | `addLine` | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
-| `reset` | Reset the map | `None` | [@example](/#) |
-| `extend` | Extend the map | The map instance `Object` | [@example](/#) |
-| `destroy` | Restroy the map | `None` | [@example](/#) |
+| `reset` | Reset the map | `None` | [@example](#reset) |
+| `extend` | Extend the map | The map instance `Object` | [@example](#extend) |
+| `destroy` | Restroy the map | `None` | [@example](#destroy) |
+| `updateSize` | Update the size of the map, useful when resizing the window | `None` | [@example](#update-size) |
 
 ### Set background color
 
@@ -107,68 +108,16 @@ document.querySelector('button').addEventListener(() => {
 })
 ```
 
-<!-- 
-### Get selected regions
+### Update size
 
-Get the selected regions as an array.
-
-```js
-const map = new jsVectorMap({
-  // ...
-  selectedRegions: ['EG', 'RU'],
-  // ...
-})
-
-document.querySelector('button').addEventListener(() => {
-  console.log(map.getSelectedRegions()) // ['EG', 'RU']
-})
-```
-
-### Clear selected regions
-
-Clear the current selected regions.
-
-```js
-const map = new jsVectorMap({})
-
-document.querySelector('button').addEventListener(() => {
-  console.log(map.clearSelectedRegions())
-})
-```
-
-### Get selected markers
-
-Get the selected markers as an array of markers indexes.
+Update the size of the map, useful when resizing the window
 
 ```js
 const map = new jsVectorMap({
-  // ...
-  markers: [
-    { name: "Egypt", coords: [26.8206, 30.8025] },
-    { name: "Canada", coords: [56.1304, 106.3468] },
-    { name: "United States", coords: [37.0902, 95.7129] }
-  ],
-  selectedMarkers: [0, 2]
-  // ...
-})
-
-document.querySelector('button').addEventListener(() => {
-  console.log(map.getSelectedMarkers()) // [0, 2]
+  onLoaded(map) {
+    window.addEventListener('resize', () => {
+      map.updateSize()
+    })
+  }
 })
 ```
-
-### Clear selected markers
-
-Clear the current selected markers.
-
-```js
-const map = new jsVectorMap({
-  // ...
-  selectedMarkers: [0, 2]
-  // ...
-})
-
-document.querySelector('button').addEventListener(() => {
-  console.log(map.clearSelectedMarkers())
-})
-``` -->
