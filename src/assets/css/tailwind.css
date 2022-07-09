@@ -11,6 +11,27 @@
   src: url(../fonts/Inter-roman-latin.var.18496762.woff2) format("woff2")
 }
 
+.custom-block {
+  @apply border rounded-md px-5 py-3 my-7;
+}
+.custom-block p {
+  @apply my-0;
+}
+
+.custom-block.danger {
+  @apply border-red-200 bg-red-50 text-red-500;
+}
+.custom-block.danger h5 {
+  @apply text-red-500;
+}
+
+.custom-block.info {
+  @apply border-blue-200 bg-blue-50 text-blue-500;
+}
+.custom-block.info h5 {
+  @apply text-blue-500;
+}
+
 /**
  * One Dark theme for prism.js
  * Based on Atom's One Dark theme: https://github.com/atom/atom/tree/master/packages/one-dark-syntax

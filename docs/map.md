@@ -50,7 +50,8 @@ const map = new jsVectorMap({
 | `getSelectedMarkers` | Get the selected `markers` | `None` | [@example](/docs/markers#get-selected-markers) |
 | `clearSelectedMarkers` | Clear the selected `markers` | `None` | [@example](/docs/markers#clear-selected-markers) |
 | `addMarkers` | Add a new marker or array of markers | [`Object` \| `Array`] | [@example](/docs/markers#adding-new-markers) |
-| `addLine` | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
+| `addLine` (deprecated) | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
+| `addLines` | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
 | `reset` | Reset the map | `None` | [@example](#reset) |
 | `extend` | Extend the map | The map instance `Object` | [@example](#extend) |
 | `destroy` | Restroy the map | `None` | [@example](#destroy) |

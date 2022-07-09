@@ -43,6 +43,7 @@ const map = new jsVectorMap({
     fill: '#ff5566',
     fillOpacity: 1,
     strokeDasharray: '6 3 6' // OR: [6, 2, 6]
+    animation: true // Enables animation
   },
 })
 ```
@@ -51,6 +52,10 @@ const map = new jsVectorMap({
 
 ### Add line
 You may want to add a new line after the map loaded
+
+:::danger
+The addLine method is deprecated due to convention reason, please use addLines instead.
+:::
 
 ```js
 // Be sure the `names` are valid, example:
@@ -64,5 +69,43 @@ const map = new jsVectorMap({
   }]
 })
 
+// Avoid this in the future versions.
 map.addLine('Egypt', 'Canada')
+
+// Use `addLines` method to add a line or multiple lines.
+map.addLines({ from: 'Palestine', to: 'Ukraine' })
+
+map.addLines([
+  { from: 'United States', to: 'Egypt' },
+  { from: 'Palestine', to: 'Ukraine' },
+])
+```
+
+### Remove line
+You may want to remove a line after the map loaded
+
+:::danger
+The removeLine method is deprecated due to convention reason, please use removeLines instead.
+:::
+
+```js
+// Be sure the `names` are valid, example:
+const map = new jsVectorMap({
+  markers: [{
+    name: 'Canada',
+    coords: [56.1304, -106.3468]
+  }, {
+    name: 'Egypt',
+    coords: [26.8, 30.8]
+  }]
+})
+
+// Avoid this in the future versions.
+map.addLine('Egypt', 'Canada')
+
+// Remove lines
+map.removeLines()
+
+// Remove a specific line
+map.removeLines([{ from: 'United States', to: 'Egypt' }])
 ```

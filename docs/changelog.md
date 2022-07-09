@@ -3,7 +3,50 @@ title: 'Changelog'
 description: Discover all the release notes for the Jsvectormap.
 ---
 
-## v1.4.5 (latest)
+## v1.5.0 (latest)
+
+- feat(events): onRegion/MarkerClick support ([#29](https://github.com/themustafaomar/jsvectormap/issues/29)) 
+- fix: shaky click selects a region ([#47](https://github.com/themustafaomar/jsvectormap/issues/47))
+- fix: lines reposition fails
+- refactor: improve the destroy method
+- refactor: build an abstract class for components
+- refactor: improve consistency & remove addMarker entirely
+- feat: ability to remove a line or multiple lines
+- refactor: better name conventions ([#86](https://github.com/themustafaomar/jsvectormap/pull/86))
+- refactor: move elements to components ([#81](https://github.com/themustafaomar/jsvectormap/pull/81))
+- refactor: get selector from merged options directly
+- fix: too much recursion error ([#75](https://github.com/themustafaomar/jsvectormap/issues/75)) ([#76](https://github.com/themustafaomar/jsvectormap/pull/76))
+- feat(lines): ability to remove lines ([#72](https://github.com/themustafaomar/jsvectormap/discussions/72))
+- fix(typo): 'tranparent' typo in default options ([#71](https://github.com/themustafaomar/jsvectormap/pull/71))
+
+### Release Notes
+
+Starting from v1.5.0 the `addLine` and `removeLine` are deprecated and will be removed soon, as an alternative please use `addLines` [see docs](path/to) and `removeLines` [see docs](path/to).
+
+```js
+const map = new jsVectorMap({})
+
+// ❌ Avoid this in the future versions.
+map.addLine()
+
+// ✅ Use `addLines` method to add a line or multiple lines.
+map.addLines({ from: 'Palestine', to: 'Ukraine' })
+
+map.addLines([
+  { from: 'United States', to: 'Egypt' },
+  { from: 'Palestine', to: 'Ukraine' },
+])
+
+// ❌ Avoid this in the future versions.
+map.removeLine('United States', 'Egypt')
+
+// ✅ Use `removeLines` method to remove multiple lines or all lines.
+map.removeLines()
+
+map.removeLines([{ from: 'United States', to: 'Egypt' }])
+```
+
+## v1.4.5
 
 - fix: jsvectormap constructor is not accessible ([#69](https://github.com/themustafaomar/jsvectormap/issues/69))
 - refactor: drop webpack development server
