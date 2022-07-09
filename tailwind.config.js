@@ -2,7 +2,8 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    './vite.config.js'
+    './node/**/*.js',
+    './vite.config.js',
   ],
   theme: {
     extend: {},
