@@ -51,7 +51,9 @@ const map = new jsVectorMap({
 | `clearSelectedMarkers` | Clear the selected `markers` | `None` | [@example](/docs/markers#clear-selected-markers) |
 | `addMarkers` | Add a new marker or array of markers | [`Object` \| `Array`] | [@example](/docs/markers#adding-new-markers) |
 | `addLine` (deprecated) | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
-| `addLines` | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
+| `addLines` | Adds new line/s between two markers | [lines `Array` \| line `Object`] | [@example](/docs/lines#add-line) |
+| `removeLine` (deprecated) | Removes a line | [from `String`, to `String`] | [@example](/docs/lines#remove-line) |
+| `removeLines` | Removes all lines or array of lines | [`None` to remove all \| lines `Array`] | [@example](/docs/lines#remove-line) |
 | `reset` | Reset the map | `None` | [@example](#reset) |
 | `extend` | Extend the map | The map instance `Object` | [@example](#extend) |
 | `destroy` | Restroy the map | `None` | [@example](#destroy) |
