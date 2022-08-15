@@ -3,21 +3,23 @@ title: 'Installation'
 description: This section proivdes several methods to install jsvectormap.
 ---
 
-## NPM
+## Installations
+
+### NPM
 `npm` is the **recommended** installation method.
 
 ```shell
 $ npm install jsvectormap
 ```
 
-## Download
+### Download
 You can download the latest version from the Github: [Download](https://github.com/themustafaomar/jsvectormap/archive/refs/heads/master.zip), or clone the repository:
 
 ```shell
 $ git clone https://github.com/themustafaomar/jsvectormap.git
 ```
 
-## CDN
+### CDN
 You can also install it via CDN links (jsdeliver).
 
 ```html

@@ -7,9 +7,9 @@ description: The map section provides the options and methods you can use to man
 
 | Property | Description | Type | Default |
 | :------- | :-----------:  | :-----------: | ------------: |
-| `map` | The name of the map you want to work with (Don't forget to import the map first) | `String` | `world` |
+| `map` | The name of the map you want to work with | `String` | `world` |
 | `backgroundColor` | The map's container background color | `String` | `transparent` |
-| `draggable` | Change the map scale when dragging | `Boolean` | `true` |
+| `draggable` | Choose whether you want to make the map draggable or not | `Boolean` | `true` |
 | `zoomButtons` | Show zoom buttons | `Boolean` | `true` |
 | `zoomOnScroll` | Zoom the map when wheeling | `Boolean` | `true` |
 | `zoomOnScrollSpeed` | The scroll speed when wheeling | `Number` | `3` |

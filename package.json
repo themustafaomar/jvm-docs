@@ -10,11 +10,11 @@
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
     "@vueuse/head": "^0.7.5",
-    "jsvectormap": "^1.4.4",
+    "jsvectormap": "^1.5.1",
     "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.4",
     "@vitejs/plugin-vue": "^2.0.0",
     "autoprefixer": "^10.4.2",
     "markdown-it": "^12.3.2",

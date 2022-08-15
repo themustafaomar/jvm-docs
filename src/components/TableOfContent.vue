@@ -66,13 +66,12 @@ const scrollListener = () => {
   const scrollPosition = document.documentElement.scrollTop
   const elements = document.querySelectorAll('.markdown-body .heading')
   const sections = []
-  let section = 0
 
   Array.prototype.forEach.call(elements, el => {
     sections.push({ id: el.id, offset: el.offsetTop })
   })
 
-  for (section of sections) {
+  for (let section of sections) {
     if (section.offset <= scrollPosition) {
       const active = getElement(`${TOC_CONTAINER_CLASS} a.\\${ACTIVE_CLASS}`)
       if (active) {

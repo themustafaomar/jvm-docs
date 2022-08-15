@@ -23,31 +23,31 @@ export default [{
     to: 'changelog',
   }]
 }, {
-  name: 'Configuration',
+  name: 'Options',
   children: [{
-    name: 'The map api',
-    to: 'map',
-  }, {
-    name: 'The regions config',
-    to: 'regions',
-  }, {
-    name: 'The markers config',
+    name: 'Markers',
     to: 'markers',
   }, {
-    name: 'The lines config',
+    name: 'Regions',
+    to: 'regions',
+  }, {
+    name: 'Lines',
     to: 'lines',
   }, {
-    name: 'The labels config',
+    name: 'Labels',
     to: 'labels',
   }, {
-    name: 'The data series config',
+    name: 'Data series',
     to: 'series',
   }, {
-    name: 'The events config',
+    name: 'Events',
     to: 'events',
   }, {
-    name: 'The data visualization',
+    name: 'Data visualization',
     to: 'data-visualization'
+  }, {
+    name: 'Map API',
+    to: 'map',
   }]
 }, {
   name: 'Other links',

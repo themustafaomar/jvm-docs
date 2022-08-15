@@ -4,6 +4,7 @@ import ContentLayout from './layouts/ContentLayout.vue'
 import VectorMap from './plugins/vectorMap'
 import routes from './routing/routes'
 import './assets/css/tailwind.css'
+import './assets/css/highlight.css'
 
 // `export const createApp` is required
 export const createApp = ViteSSG(
@@ -13,7 +14,7 @@ export const createApp = ViteSSG(
     scrollBehavior(to, from, savedPosition) {
       return savedPosition ? savedPosition : { top: 0 }
     },
-    linkExactActiveClass: '!text-blue-600',
+    linkExactActiveClass: '!text-blue-600 !border-blue-600',
   },
   async ({ app, router, routes, isClient, initialState }) => {
     app.use(VectorMap, {})

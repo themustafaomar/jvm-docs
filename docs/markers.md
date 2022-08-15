@@ -7,7 +7,7 @@ description: Markers let you codify your topics with visual icons, shapes, or te
 | :------------ | :-----------:  | :-----------: | ------------: |
 | `markers`     | Adding markers | `Array`       | `[]`          |
 
-## How to use
+## Get started
 <!-- Register markers specifications, to get started with markers do the example below. -->
 
 **Notice**: If you pass a `name` property to the marker object, when a user hovers over the marker the tooltip will show and use that `name`, it's also used to connect [Lines](lines) as a unique identifier.
@@ -15,21 +15,36 @@ description: Markers let you codify your topics with visual icons, shapes, or te
 ```js
 const map = new jsVectorMap({ 
   markers: [
-    { name: "Egypt", coords: [26.8206, 30.8025] }, // Egypt coordinates
-    { name: "Canada", coords: [56.1304, 106.3468] }, // Canada coordinates
+    { name: 'Egypt', coords: [26.8206, 30.8025] }, // Egypt coordinates
+    { name: 'Canada', coords: [56.1304, -106.3468] }, // Canada coordinates
     {
       // US coordinates
-      name: "United States",
+      name: 'United States',
       coords: [37.0902, 95.7129],
-      style: { fill: 'red' } // Add style for this particular marker
+      // Add style for this particular marker
+      // Keep in mind `style` object is merged with `markerStyle.initial`
+      style: { fill: 'red' }
     }
   ]
 })
 ```
 
+<vectorMap :options="{
+  markers: [
+    { name: 'Egypt', coords: [26.8206, 30.8025] },
+    { name: 'Canada', coords: [56.1304, -106.3468] },
+    {
+      name: 'United States',
+      coords: [37.0902, 95.7129],
+      style: { fill: 'red' }
+    }
+  ],
+}">
+</vectorMap>
+
 ## Configuration
 
-### Selected markers
+### Selecting markers
 You may want to select a set of markers initially with some styles to make them unique.
 
 Add the `selectedMarkers` property, then you will need to add the indexes of the markers you want to select.
@@ -44,7 +59,7 @@ const map = new jsVectorMap({
 })
 ```
 
-### Marker selectable
+### Selectable
 Choose whether the markers are selectable or not, default is `false`
 
 ```js
@@ -53,7 +68,7 @@ const map = new jsVectorMap({
 })
 ```
 
-### Marker selectable one
+### Selectable one
 To allow only one marker to be selected, set `markersSelectableOne` to be `true`, default is `false`
 
 ```js
@@ -62,16 +77,18 @@ const map = new jsVectorMap({
 })
 ```
 
-### Marker as a circle
+### Circle marker
 Cotrolling the marker style for `initial`, `hover`, `selected`, and `selectedHover` states.
 
+:::info
 **Notice**: Feel free to add any [circle](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle) valid property, and again each style property in `initial` object can be added to `hover`, `selected` and `selectedHover` objects as well
+:::
 
 ```js
 const map = new jsVectorMap({ 
   markerStyle: {
     initial: {
-      stroke: "#676767",
+      stroke: '#676767',
       strokeWidth: 2.5,
       fill: '#ff5566',
       fillOpacity: 1
@@ -83,7 +100,7 @@ const map = new jsVectorMap({
 })
 ```
 
-### Marker as an image
+### Image marker
 You can add an image as a marker instead of `circle` as well.
 
 ```js
@@ -121,7 +138,9 @@ const map = new jsVectorMap({
 
 ## Methods
 
-### Adding new markers
+The markers methods are a set of usefull functions you can call after the map has loaded eg: add marker, remove marker etc.
+
+### Adding markers
 You may want to add a new marker programmatically after the map has been loaded, for example add a new marker when the user clicks a button.
 
 ```js
@@ -138,7 +157,7 @@ map.addMarkers([{
   name: 'Egypt',
   coords: [26.8206, 30.8025],
 
-  // Add some style for this particular marker.
+  // Add additional style for this particular marker.
   style: { fill: 'red' }
 }])
 ```
@@ -162,14 +181,14 @@ const map = new jsVectorMap({ })
 map.clearSelectedMarkers() // returns undefined
 ```
 
-### Remove all markers
-If you want to remove all markers entirly you can use `removeMarkers` method.
+### Remove markers
+If you want to remove certain markers or all markers entirly you can use `removeMarkers` method.
 
 ```js
 const map = new jsVectorMap({ })
 
 // Notice this method accepts an array of markers indexes you want to remove
-map.removeMarkers([1, 3]) // returns undefined
+map.removeMarkers([1, 3])
 
 // As of v1.3.2 if you didn't pass the indexs, all markers will be removed
 map.removeMarkers()

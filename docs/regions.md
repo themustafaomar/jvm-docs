@@ -115,7 +115,7 @@ const map = new jsVectorMap({
     // Same properties in initial object can be overwritten in hover and selected states.
     hover: {},
     selected: {},
-    selectedHHover: {}
+    selectedHover: {}
   },
 })
 ```

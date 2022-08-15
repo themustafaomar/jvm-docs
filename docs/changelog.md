@@ -21,7 +21,9 @@ description: Discover all the release notes for the Jsvectormap.
 
 ### Release Notes
 
-Starting from v1.5.0 the `addLine` and `removeLine` are deprecated and will be removed soon, as an alternative please use `addLines` [see docs](path/to) and `removeLines` [see docs](path/to).
+Starting from v1.5.0 the `addLine` and `removeLine` are deprecated and will be removed soon, as an alternative please use `addLines` [see docs](/docs/lines) and `removeLines` [see docs](/docs/lines).
+
+Events `onRegionTooltipShow` and `onMarkerTooltipShow` will receive the native event as the first argument.
 
 ```js
 const map = new jsVectorMap({})
@@ -44,6 +46,19 @@ map.removeLine('United States', 'Egypt')
 map.removeLines()
 
 map.removeLines([{ from: 'United States', to: 'Egypt' }])
+
+// Events
+
+const map = new jsVectorMap({
+  ...
+  onRegionTooltipShow(event, tooltip, index) {
+    // ..
+  }
+  onMarkerTooltipShow(event, tooltip, index) {
+    // ..
+  }
+  ...
+})
 ```
 
 ## v1.4.5

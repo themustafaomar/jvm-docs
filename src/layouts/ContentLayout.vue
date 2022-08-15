@@ -10,7 +10,7 @@
     <sidebar />
 
     <article class="my-4 md:my-8">
-      <div class="lg:ml-[16.5rem]">
+      <div class="lg:ml-[19rem]">
         <div class="max-w-3xl mx-auto xl:max-w-none xl:ml-0 xl:mr-[16rem]">
           <div class="flex items-center justify-between">
             <div>

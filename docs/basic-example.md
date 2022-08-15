@@ -3,10 +3,12 @@ title: 'Basic example'
 description: The section provides basic examples using diffrent approaches to get started.
 ---
 
-## Using cli
+## Using CLI
 If you're using `webpack` or any module bundler, you need to import the map you want to work with after importing jsvectormap.
 
-**Notice**: We're using `world_merc` in the docs not `world` map.
+:::info
+Notice: We will be using `world_merc` in the incoming examples in the docs.
+:::
 
 ```javascript
 import jsVectorMap from 'jsvectormap'
@@ -18,7 +20,7 @@ const map = new jsVectorMap({
 })
 ```
 
-## Overwrite style
+## Customize style
 Style was written using `Sass` so you can overwrite the default style using variables without twaeaking it, you may want to take a look at [jsvectormap.scss](https://github.com/themustafaomar/jsvectormap/blob/master/src/scss/jsvectormap.scss) to know about all possiable variables.
 ```scss
 // app.scss

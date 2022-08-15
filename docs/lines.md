@@ -8,7 +8,7 @@ description: The lines are used to connect two or more markers with each other.
 | `lines`       | Adding lines between markers   | `Array`       | `[]`          |
 
 ## How to use
-Register lines specifications, to get started with lines do the example below.
+Register lines specifications, to get started using lines you can implement the example below.
 
 **Notice**: lines requires `markers` to work.
 
@@ -19,27 +19,45 @@ const map = new jsVectorMap({
     { name: 'Bar', coords: [35.8617, 104.1954] }
   ],
   lines: [{
-    from: 'Foo', to: 'Bar',
+    from: 'Foo',
+    to: 'Bar',
+    style: {
+      stroke: 'red',
+    }
+  }]
+})
+```
+
+<vectorMap :options="{
+  markers: [
+    { name: 'Foo', coords: [-14.2350, -51.9253] },
+    { name: 'Bar', coords: [35.8617, 104.1954] }
+  ],
+  lines: [{
+    from: 'Foo',
+    to: 'Bar',
     style: {
       stroke: 'red',
       strokeWidth: 1.5
     }
   }]
-})
-```
+}">
+</vectorMap>
 
 ## Configuration
 
 ### Line style
 Control the line style, notice no `hover` or `selected` object for lines, add your style directly within `lineStyle`.
 
-**Notice**: you can add any [line](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line) property for example:
+:::info
+**Notice**: you can add any valid [line](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line) property for example:
+:::
 
 ```js
 const map = new jsVectorMap({ 
   lineStyle: {
     stroke: "#676767",
-    strokeWidth: 2.5,
+    strokeWidth: 1.5,
     fill: '#ff5566',
     fillOpacity: 1,
     strokeDasharray: '6 3 6' // OR: [6, 2, 6]
@@ -48,13 +66,29 @@ const map = new jsVectorMap({
 })
 ```
 
+<vectorMap :options="{
+  markers: [
+    { name: 'Foo', coords: [-14.2350, -51.9253] },
+    { name: 'Bar', coords: [35.8617, 104.1954] }
+  ],
+  lineStyle: {
+    stroke: '#676767',
+    strokeWidth: 1.5,
+    strokeDasharray: '6 3 6',
+    animation: true
+  },
+  lines: [{ from: 'Foo', to: 'Bar' }]
+}">
+</vectorMap>
+
 ## Methods
+The lines methods are a set of usefull functions you can call after the map has loaded to add connect markers with lines.
 
 ### Add line
 You may want to add a new line after the map loaded
 
 :::danger
-The addLine method is deprecated due to convention reason, please use addLines instead.
+The `addLine` method is deprecated due to convention reasons, please use `addLines` instead.
 :::
 
 ```js
@@ -81,11 +115,11 @@ map.addLines([
 ])
 ```
 
-### Remove line
+### Removing lines
 You may want to remove a line after the map loaded
 
 :::danger
-The removeLine method is deprecated due to convention reason, please use removeLines instead.
+The `removeLine` method is deprecated due to convention reasons, please use `removeLines` instead.
 :::
 
 ```js

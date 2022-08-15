@@ -27,6 +27,7 @@ onMounted(async () => {
     selector: `#${uuid.value}`,
     map: 'world_merc',
     zoomButtons: false,
+    zoomOnScroll: false,
     regionStyle: { initial: { fill: '#d1d5db' } },
     labels: {
       markers: { render: marker => marker.name }
