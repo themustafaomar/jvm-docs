@@ -3,7 +3,13 @@ title: 'Changelog'
 description: Discover all the release notes for the Jsvectormap.
 ---
 
-## v1.5.0 (latest)
+## v1.5.1 (latest)
+
+- fix: region label fails ([#92](https://github.com/themustafaomar/jsvectormap/issues/92))
+- fix: add ability to customize circled markers ([#97](https://github.com/themustafaomar/jsvectormap/discussions/97))
+- refactor: improve consistency & readability ([5cf594d](https://github.com/themustafaomar/jsvectormap/commit/5cf594d62d3ea1175d7a56e994a90740246fd778))
+
+## v1.5.0
 
 - feat(events): onRegion/MarkerClick support ([#29](https://github.com/themustafaomar/jsvectormap/issues/29)) 
 - fix: shaky click selects a region ([#47](https://github.com/themustafaomar/jsvectormap/issues/47))
