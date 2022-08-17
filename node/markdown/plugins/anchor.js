@@ -1,5 +1,4 @@
 import string from 'string'
-import anchor from 'markdown-it-anchor'
 
 const symbolTemplate = `
   <div aria-hidden="true" class="absolute items-center group-hover:flex hidden mr-1 -left-2 top-0 bottom-0 m-auto">
@@ -8,7 +7,7 @@ const symbolTemplate = `
     </svg>
   </div>`
 
-export const anchorPlugin = () => {
+export const anchorPlugin = (anchor) => {
   return {
     slugify: s => string(s).slugify().toString(),
     callback(token) {
