@@ -15,12 +15,11 @@ description: Markers let you codify your topics with visual icons, shapes, or te
 ```js
 const map = new jsVectorMap({ 
   markers: [
-    { name: 'Egypt', coords: [26.8206, 30.8025] }, // Egypt coordinates
-    { name: 'Canada', coords: [56.1304, -106.3468] }, // Canada coordinates
+    { name: 'Egypt', coords: [26.8206, 30.8025] },
+    { name: 'United Kingdom', coords: [55.3781, 3.4360] },
     {
-      // US coordinates
       name: 'United States',
-      coords: [37.0902, 95.7129],
+      coords: [37.0902, -95.7129],
       // Add style for this particular marker
       // Keep in mind `style` object is merged with `markerStyle.initial`
       style: { fill: 'red' }
@@ -32,13 +31,13 @@ const map = new jsVectorMap({
 <vectorMap :options="{
   markers: [
     { name: 'Egypt', coords: [26.8206, 30.8025] },
-    { name: 'Canada', coords: [56.1304, -106.3468] },
+    { name: 'United Kingdom', coords: [55.3781, 3.4360] },
     {
       name: 'United States',
-      coords: [37.0902, 95.7129],
+      coords: [37.0902, -95.7129],
       style: { fill: 'red' }
     }
-  ],
+  ]
 }">
 </vectorMap>
 
@@ -107,11 +106,38 @@ You can add an image as a marker instead of `circle` as well.
 const map = new jsVectorMap({
   markerStyle: {
     initial: {
-      image: '/path/to/image'
+      // Add default image marker.
+      // image: '/path/to/image'
     }
-  }
+  },
+  markers: [
+    { name: 'Egypt', coords: [26.8206, 30.8025] },
+    { name: 'United States', coords: [37.0902, -95.7129] },
+    {
+      name: 'United Kingdom',
+      coords: [55.3781, 3.4360],
+      style: {
+        image: '/images/pin.png' // Add a marker image for this particular marker.
+      }
+    }
+  ]
 })
 ```
+
+<vectorMap :options="{
+  markers: [
+    { name: 'Egypt', coords: [26.8206, 30.8025] },
+    { name: 'United States', coords: [37.0902, -95.7129] },
+    {
+      name: 'United Kingdom',
+      coords: [55.3781, 3.4360],
+      style: {
+        image: '/images/pin.png'
+      }
+    },
+  ]
+}">
+</vectorMap>
 
 ### Marker label style
 To control the label style you will need to add a new property called `markerLabelStyle` to the map.
