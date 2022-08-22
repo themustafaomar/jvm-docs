@@ -60,7 +60,7 @@ const map = new jsVectorMap({
     strokeWidth: 1.5,
     fill: '#ff5566',
     fillOpacity: 1,
-    strokeDasharray: '6 3 6' // OR: [6, 2, 6]
+    strokeDasharray: '6 3 6', // OR: [6, 2, 6]
     animation: true // Enables animation
   },
 })
