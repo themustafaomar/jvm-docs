@@ -1,42 +1,24 @@
 <template>
-  <div
-    class="table-of-contents fixed top-[3.8125rem] right-[max(0px,calc(50%-45rem))] w-[16rem] py-10 px-8 overflow-y-auto hidden xl:block"
-  >
-    <h5 class="text-gray-900 font-semibold mb-4 text-sm leading-6">On this page</h5>
-    <ul v-if="toc.length" class="text-gray-700 text-sm leading-6">
+  <div class="_toc hidden xl:sticky xl:top-[4.5rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.5rem)] xl:flex-none xl:overflow-y-auto xl:py-14 xl:pr-6">
+    <h2 id="on-this-page-title" class="font-display text-sm font-medium text-slate-900">On this page</h2>
+
+    <ol v-if="toc.length" role="list" class="mt-4 space-y-3 text-sm">
       <template v-for="section in toc" :key="section.name">
         <li>
-          <a
-            @click.prevent="go($event, section.hash)"
-            :href="decodeHash(section.hash)"
-            class="block font-medium hover:text-gray-900 py-1"
-          >{{ section.name }}</a>
-        </li>
-        <li v-for="child in section.children" class="ml-4">
-          <a
-            @click.prevent="go($event, child.hash)"
-            :href="decodeHash(child.hash)"
-            class="group flex items-start py-1"
-          >
-            <svg
-              width="3"
-              height="24"
-              viewBox="0 -9 3 24"
-              class="text-gray-400 overflow-visible group-hover:text-gray-600 mr-2"
-            >
-              <path
-                d="M0 0L3 3L0 6"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
-            </svg>
-            {{ child.name }}
-          </a>
+          <h3 >
+            <a :href="section.hash" class="link-point font-medium text-slate-700 hover:text-slate-800">{{ section.name }}</a>
+          </h3>
+          <ol role="list" class="mt-2 space-y-3 pl-5 text-slate-700">
+            <li v-for="child in section.children" class="flex">
+              <svg class="w-2 text-gray-400 mr-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 2L10.6464 7.64645C10.8417 7.84171 10.8417 8.15829 10.6464 8.35355L5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              <a :href="child.hash" class="link-point">{{ child.name }}</a>
+            </li>
+          </ol>
         </li>
       </template>
-    </ul>
+    </ol>
 
     <div v-else class="mt-5">
       <h4 class="text-xl font-semibold mb-2">@nope</h4>
@@ -47,10 +29,9 @@
 
 <script setup>
 import { onMounted, onUnmounted } from 'vue'
-import { getElement } from '../utils'
 
 const ACTIVE_CLASS = '!text-blue-600'
-const TOC_CONTAINER_CLASS = '.table-of-contents'
+const TOC_CONTAINER_CLASS = '._toc'
 
 defineProps({ toc: Object })
 
@@ -68,7 +49,7 @@ const scrollListener = () => {
   const sections = []
 
   Array.prototype.forEach.call(elements, el => {
-    sections.push({ id: el.id, offset: el.offsetTop })
+    sections.push({ id: el.id, offset: el.offsetTop - 25 })
   })
 
   for (let section of sections) {
@@ -85,24 +66,7 @@ const scrollListener = () => {
   }
 }
 
-function go(event, hash) {
-  if (hash) {
-    let target
-    try {
-      target = getElement(decodeHash(hash))
-    } catch (e) {
-      console.warn(e)
-    }
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      })
-    }
-  }
-}
-
-function decodeHash(hash) {
-  return decodeURIComponent(hash)
+const getElement = (selector) => {
+  return document.querySelector(selector)
 }
 </script>

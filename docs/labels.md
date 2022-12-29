@@ -7,7 +7,7 @@ description: Label is a text or symbol that produces a description or informatio
 | :------- | :---------: | :--: | :-----: |
 | `lines`  | Adding labels for `regions` and `markers` | `Array` | `[]` |
 
-## How to use
+## Getting started
 You may want to add a label besides the marker that describes something, or showing the region name (I highly recommend showing the region name besides the marker, as it looks a little bit pretty)
 
 **Notice**: you have access to the whole marker object not just the `name`, this means you can define any property and access it inside the `render` function.
@@ -31,23 +31,7 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Egypt', coords: [26.8206, 30.8025] },
-    { coords: [56.1304, 106.3468], labelName: 'Hello Canada' },
-    { coords: [48.379433, 31.16558] }
-  ],
-  labels: {
-    markers: {
-      // Starting from jsvectormap v1.2 the render function receives
-      // the marker object as a first parameter and index as the second.
-      render(marker, index) {
-        return marker.name || marker.labelName || 'Not available'
-      }
-    }
-  }
-}">
-</vectorMap>
+<vector-map id="labelsIntro" />
 
 ## Labels with regions
 You may also want to add a label for a certain region.
@@ -96,17 +80,4 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Egypt', coords: [26.8206, 30.8025], offsets: [14, 10] },
-    { name: 'Russia', coords: [56.1304, 106.3468], offsets: [7, -7] },
-    { name: 'Romania', coords: [48.379433, 31.16558] }
-  ],
-  labels: {
-    markers: {
-      render: (marker) => marker.name,
-      offsets: [[14,10], [7,-7], [0, 0]]
-    },
-  }
-}">
-</vectorMap>
+<vector-map id="labelsOffsets" />

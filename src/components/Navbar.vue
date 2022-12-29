@@ -1,16 +1,13 @@
 <template>
-  <div class="bg-white sticky top-0 z-40 w-full lg:z-50 lg:border-b lg:border-gray-900/10">
-    <div class="max-w-[90rem] mx-auto">
+  <div class="bg-white sticky top-0 z-40 w-full lg:z-50 shadow-md shadow-slate-600/5">
+    <div class="max-w-screen-xl mx-auto">
       <div class="py-4 border-b border-gray-900/10 lg:px-8 lg:border-0 mx-4 lg:mx-0">
         <div class="relative flex items-center">
           <a class="mr-3 overflow-hidden md:w-auto" href="/">
             <h5 class="font-semibold text-xl text-gray-600">
-              jvm/<span class="text-blue-500">docs</span>
+              <img src="/images/jsvectormap-logo.svg" width="113" alt="Jsvectormap logo" />
             </h5>
           </a>
-          <div class="hidden sm:block text-sm text-blue-500 bg-blue-500 bg-opacity-5 rounded-full px-2 py-0.5">
-            Lightweight JavaScript library for creating interactive maps
-          </div>
           <nav class="hidden lg:block ml-auto">
             <ul class="flex space-x-8 text-sm leading-6 font-semibold text-gray-700">
               <li>

@@ -4,14 +4,20 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, getCurrentInstance, computed } from 'vue'
+import config from '../samples'
 
 const map = ref({})
 
 const props = defineProps({
   __globalOptions__: Object,
-  options: Object,
+  // options: Object,
   width: Number,
   height: Number,
+  id: String
+})
+
+defineExpose({
+  instance: map,
 })
 
 const uuid = computed(() => {
@@ -36,7 +42,7 @@ onMounted(async () => {
       window.addEventListener('resize', resizeMap)
     },
     ...props.__globalOptions__,
-    ...props.options,
+    ...config[props.id]?.(),
   })
 })
 

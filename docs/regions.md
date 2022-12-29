@@ -122,7 +122,7 @@ const map = new jsVectorMap({
 
 ## Methods
 
-### Get selected regions
+### getSelectedRegions()
 
 You may want to get the current selected regions to send them to the server-side for example, here is how you can do that.
 
@@ -132,7 +132,7 @@ const map = new jsVectorMap({ })
 console.log(map.getSelectedRegions()) // returns an array of region codes: ['EG', 'US', ]
 ```
 
-### Clear selected regions
+### clearSelectedRegions()
 
 Finally you can remove all selected regions.
 

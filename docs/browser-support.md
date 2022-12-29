@@ -3,6 +3,4 @@ title: 'Browser support'
 description: This section provides the list of browsers that Jsvectormap is compatible with.
 ---
 
-## @nope
-
-Documentation is still in development there're missing information I'm working on, be right back, thank you!
+Jsvectormap supports all modern browsers including IE9+, in the jsvectormap v2 IE11 and earlier will be dropped.

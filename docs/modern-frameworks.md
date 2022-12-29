@@ -10,14 +10,32 @@ When it comes to Vue js, you have two choices, the first one is to use the Vue [
 Let's start with global registration, in `app.js`.
 
 ```js
-import Vue from 'vue'
+import { createApp } from 'vue'
 import jsVectorMap from 'jsvectormap'
 import 'jsvectormap/dist/maps/world-merc'
+import 'jsvectormap/src/scss/jsvectormap.scss'
 
-const app = new Vue({...})
+const app = createApp({})
+
+// pages/dashboard.vue
+
+// <script>
+export default {
+  ...
+  mounted() {
+    const map = new jsVectorMap({
+      selector: '#map',
+      map: 'world_merc',
+    })
+  }
+  ...
+}
+// </script>
 ```
 
-Or you can use it in a specific component, for example `pages/index.vue`.
+### Locally
+
+Or you can use it in a specific component, for example `pages/dashboard.vue`.
 
 ```html
 <template>
@@ -27,10 +45,11 @@ Or you can use it in a specific component, for example `pages/index.vue`.
 <script>
 import jsVectorMap from 'jsvectormap'
 import 'jsvectormap/dist/maps/world-merc'
+import 'jsvectormap/src/scss/jsvectormap.scss'
 
 export default {
   data: () => ({
-    map: {}
+    map: null
   }),
   mounted() {
     this.map = new jsVectorMap({
@@ -41,7 +60,6 @@ export default {
 }
 </script>
 ```
-
 
 ## Nuxtjs
 
@@ -117,7 +135,7 @@ if (process.client) {
 
 export default {
   data: () => ({
-    map: {}
+    map: null
   }),
   mounted() {
     this.map = new jsVectorMap({

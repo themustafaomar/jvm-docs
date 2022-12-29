@@ -1,5 +1,5 @@
 export default [{
-  name: 'Getting started',
+  name: 'Getting Started',
   children: [{
     name: 'Introduction',
     to: 'introduction'
@@ -19,6 +19,9 @@ export default [{
     name: 'Modern frameworks',
     to: 'modern-frameworks'
   }, {
+    name: 'Integrate with Vue.js',
+    to: 'integrate-with-vue'
+  }, {
     name: 'Change log',
     to: 'changelog',
   }]
@@ -37,6 +40,9 @@ export default [{
     name: 'Labels',
     to: 'labels',
   }, {
+    name: 'Tooltip',
+    to: 'tooltip',
+  }, {
     name: 'Data series',
     to: 'series',
   }, {
@@ -46,18 +52,34 @@ export default [{
     name: 'Data visualization',
     to: 'data-visualization'
   }, {
-    name: 'Map API',
+    name: 'API reference',
     to: 'map',
   }]
 }, {
-  name: 'Other links',
+  name: 'Real-life examples',
+  children: [{
+    name: 'Reflect user location',
+    to: 'samples/reflect-user-location',
+  }, {
+    name: 'Series markers & regions',
+    to: 'samples/series-markers-regions',
+  }, {
+    name: 'Vue.js example',
+    to: 'samples/vuejs-example',
+  },]
+}, {
+  name: 'Useful links',
   children: [{
     name: 'Troubleshooting',
     to: 'https://github.com/themustafaomar/jsvectormap/issues/new/choose',
+    external: true
+  },  {
+    name: 'Docs source code',
+    to: 'https://github.com/themustafaomar/jsvectormap',
     external: true
   }, {
     name: 'Start on Github',
     to: 'https://github.com/themustafaomar/jsvectormap',
     external: true
-  }]
+  },]
 }]

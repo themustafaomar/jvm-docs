@@ -1,9 +1,9 @@
 ---
-title: 'Map api'
-description: The map section provides the options and methods you can use to manipulate the map.
+title: 'API Reference'
+description: The map section provides detailed information about the options and methods you can use to manipulate the map.
 ---
 
-## Map options
+## Options
 
 | Property | Description | Type | Default |
 | :------- | :-----------:  | :-----------: | ------------: |
@@ -50,8 +50,8 @@ const map = new jsVectorMap({
 | `getSelectedMarkers` | Get the selected `markers` | `None` | [@example](/docs/markers#get-selected-markers) |
 | `clearSelectedMarkers` | Clear the selected `markers` | `None` | [@example](/docs/markers#clear-selected-markers) |
 | `addMarkers` | Add a new marker or array of markers | [`Object` \| `Array`] | [@example](/docs/markers#adding-new-markers) |
-| `addLine` (deprecated) | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#add-line) |
-| `addLines` | Adds new line/s between two markers | [lines `Array` \| line `Object`] | [@example](/docs/lines#add-line) |
+| `addLine` (deprecated) | Adds new line between two markers | [from `String`, to `String`] | [@example](/docs/lines#addlines) |
+| `addLines` | Adds new line/s between two markers | [lines `Array` \| line `Object`] | [@example](/docs/lines#addlines) |
 | `removeLine` (deprecated) | Removes a line | [from `String`, to `String`] | [@example](/docs/lines#remove-line) |
 | `removeLines` | Removes all lines or array of lines | [`None` to remove all \| lines `Array`] | [@example](/docs/lines#remove-line) |
 | `reset` | Reset the map | `None` | [@example](#reset) |
@@ -59,7 +59,7 @@ const map = new jsVectorMap({
 | `destroy` | Restroy the map | `None` | [@example](#destroy) |
 | `updateSize` | Update the size of the map, useful when resizing the window | `None` | [@example](#update-size) |
 
-### Set background color
+### setBackgroundColor()
 
 Set the map's background color.
 
@@ -71,7 +71,7 @@ document.querySelector('button').addEventListener('click', () => {
 })
 ```
 
-### Reset
+### reset()
 
 Reset the map.
 
@@ -83,7 +83,21 @@ document.querySelector('button').addEventListener('click', () => {
 })
 ```
 
-### Extend
+### updateSize()
+
+Update the size of the map, useful when resizing the window
+
+```js
+const map = new jsVectorMap({
+  onLoaded(map) {
+    window.addEventListener('resize', () => {
+      map.updateSize()
+    })
+  }
+})
+```
+
+### extend()
 
 Extend the map by adding a method to the map prototype.
 
@@ -99,7 +113,7 @@ map.extend('$hello', function (options) {
 map.$hello({})
 ```
 
-### Destroy
+### destroy()
 
 Destroy the map, by removing the map, tooltip and all event listeners attached to the map.
 
@@ -108,19 +122,5 @@ const map = new jsVectorMap({})
 
 document.querySelector('button').addEventListener(() => {
   map.destroy()
-})
-```
-
-### Update size
-
-Update the size of the map, useful when resizing the window
-
-```js
-const map = new jsVectorMap({
-  onLoaded(map) {
-    window.addEventListener('resize', () => {
-      map.updateSize()
-    })
-  }
 })
 ```

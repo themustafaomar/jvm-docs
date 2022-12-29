@@ -10,13 +10,16 @@ export default [
   ...pages
     .map((s) => ({
       name: s.name,
-      children: s.children.map((obj) => ({ ...obj, section: s.name }))
+      children: s.children.map((obj) => ({
+        ...obj,
+        section: s.name,
+      }))
     }))
     .flatMap((g) => g.children.filter((item) => !item.external))
     .map((page) => ({
       path: `/docs/${page.to}`,
-      component: () => import(`../../docs/${page.to}.md`),
-      meta: { section: page.section }
+      component: () => import(/* @vite-ignore */ `..\/..\/docs/${page.to}.md`),
+      meta: { section: page.section },
     })),
   {
     path: '/:other*',

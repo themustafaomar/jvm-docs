@@ -12,7 +12,7 @@ export const anchorPlugin = (anchor) => {
     slugify: s => string(s).slugify().toString(),
     callback(token) {
       token.attrPush([
-        'class', 'heading group relative flex items-center capitalize -ml-4 pl-4'
+        'class', 'link-point heading group relative flex items-center capitalize tracking-tight -ml-4 pl-4',
       ])
     },
     permalink: anchor.permalink.linkInsideHeader({

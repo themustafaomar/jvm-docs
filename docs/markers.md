@@ -7,7 +7,7 @@ description: Markers let you codify your topics with visual icons, shapes, or te
 | :------------ | :-----------:  | :-----------: | ------------: |
 | `markers`     | Adding markers | `Array`       | `[]`          |
 
-## Get started
+## Getting started
 <!-- Register markers specifications, to get started with markers do the example below. -->
 
 **Notice**: If you pass a `name` property to the marker object, when a user hovers over the marker the tooltip will show and use that `name`, it's also used to connect [Lines](lines) as a unique identifier.
@@ -28,20 +28,11 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Egypt', coords: [26.8206, 30.8025] },
-    { name: 'United Kingdom', coords: [55.3781, 3.4360] },
-    {
-      name: 'United States',
-      coords: [37.0902, -95.7129],
-      style: { fill: 'red' }
-    }
-  ]
-}">
-</vectorMap>
+<vector-map id="markersIntro" />
 
-## Configuration
+## Options
+
+The marker options configuration.
 
 ### Selecting markers
 You may want to select a set of markers initially with some styles to make them unique.
@@ -124,20 +115,7 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Egypt', coords: [26.8206, 30.8025] },
-    { name: 'United States', coords: [37.0902, -95.7129] },
-    {
-      name: 'United Kingdom',
-      coords: [55.3781, 3.4360],
-      style: {
-        image: '/images/pin.png'
-      }
-    },
-  ]
-}">
-</vectorMap>
+<vector-map id="markersImageMarker" />
 
 ### Marker label style
 To control the label style you will need to add a new property called `markerLabelStyle` to the map.
@@ -164,9 +142,9 @@ const map = new jsVectorMap({
 
 ## Methods
 
-The markers methods are a set of usefull functions you can call after the map has loaded eg: add marker, remove marker etc.
+The markers methods are a set of useful functions you can call after the map has loaded eg: add marker, remove marker etc.
 
-### Adding markers
+### addMarkers()
 You may want to add a new marker programmatically after the map has been loaded, for example add a new marker when the user clicks a button.
 
 ```js
@@ -182,13 +160,12 @@ map.addMarkers([{
 }, {
   name: 'Egypt',
   coords: [26.8206, 30.8025],
-
   // Add additional style for this particular marker.
   style: { fill: 'red' }
 }])
 ```
 
-### Get selected markers
+### getSelectedMarkers()
 You may want to get the current selected markers to send them to the server-side for example, here is how you can do that.
 
 ```js
@@ -198,7 +175,7 @@ console.log(map.getSelectedMarkers())
 // returns an array of markers indexes: [0, 2, 3]
 ```
 
-### Clear selected markers
+### clearSelectedMarkers()
 You may want to clear all selected markers.
 
 ```js
@@ -207,7 +184,7 @@ const map = new jsVectorMap({ })
 map.clearSelectedMarkers() // returns undefined
 ```
 
-### Remove markers
+### removeMarkers()
 If you want to remove certain markers or all markers entirly you can use `removeMarkers` method.
 
 ```js

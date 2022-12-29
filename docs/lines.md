@@ -7,7 +7,7 @@ description: The lines are used to connect two or more markers with each other.
 | :------------ | :-----------:  | :-----------: | ------------: |
 | `lines`       | Adding lines between markers   | `Array`       | `[]`          |
 
-## How to use
+## Getting started
 Register lines specifications, to get started using lines you can implement the example below.
 
 **Notice**: lines requires `markers` to work.
@@ -28,21 +28,7 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Foo', coords: [-14.2350, -51.9253] },
-    { name: 'Bar', coords: [35.8617, 104.1954] }
-  ],
-  lines: [{
-    from: 'Foo',
-    to: 'Bar',
-    style: {
-      stroke: 'red',
-      strokeWidth: 1.5
-    }
-  }]
-}">
-</vectorMap>
+<vector-map id="linesIntro" />
 
 ## Configuration
 
@@ -50,7 +36,7 @@ const map = new jsVectorMap({
 Control the line style, notice no `hover` or `selected` object for lines, add your style directly within `lineStyle`.
 
 :::info
-**Notice**: you can add any valid [line](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line) property for example:
+Notice: you can add any valid [line](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line) property for example:
 :::
 
 ```js
@@ -66,29 +52,16 @@ const map = new jsVectorMap({
 })
 ```
 
-<vectorMap :options="{
-  markers: [
-    { name: 'Foo', coords: [-14.2350, -51.9253] },
-    { name: 'Bar', coords: [35.8617, 104.1954] }
-  ],
-  lineStyle: {
-    stroke: '#676767',
-    strokeWidth: 1.5,
-    strokeDasharray: '6 3 6',
-    animation: true
-  },
-  lines: [{ from: 'Foo', to: 'Bar' }]
-}">
-</vectorMap>
+<vector-map id="linesStyle" />
 
 ## Methods
-The lines methods are a set of usefull functions you can call after the map has loaded to add connect markers with lines.
+The lines methods are a set of useful functions you can call after the map has loaded to add connection between the markers with lines.
 
-### Add line
+### addLines()
 You may want to add a new line after the map loaded
 
 :::danger
-The `addLine` method is deprecated due to convention reasons, please use `addLines` instead.
+The addLine method is deprecated due to convention reasons, please use addLines instead.
 :::
 
 ```js
@@ -115,11 +88,11 @@ map.addLines([
 ])
 ```
 
-### Removing lines
+### removeLines()
 You may want to remove a line after the map loaded
 
 :::danger
-The `removeLine` method is deprecated due to convention reasons, please use `removeLines` instead.
+The removeLine method is deprecated due to convention reasons, please use removeLines instead.
 :::
 
 ```js

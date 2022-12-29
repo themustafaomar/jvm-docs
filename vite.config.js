@@ -17,7 +17,7 @@ export default defineConfig({
     Markdown({
       headEnabled: true,
       wrapperClasses: 'markdown-body',
-      wrapperComponent: 'ContentLayout',
+      wrapperComponent: 'wrapper',
       markdownItOptions: {
         html: true,
         linkify: true,
@@ -30,6 +30,7 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    format: 'cjs',
     includedRoutes(paths) {
       return paths.map(path => path.startsWith('/:other') ? '/404' : path)
     }
