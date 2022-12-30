@@ -28,9 +28,9 @@ export default defineConfig({
 
   // Vite ssg
   ssgOptions: {
-    script: 'async',
     formatting: 'minify',
     format: 'cjs',
+    mode: 'ssr',
     includedRoutes(paths) {
       return paths.map(path => path.startsWith('/:other') ? '/404' : path)
     }

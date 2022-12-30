@@ -59,14 +59,14 @@ export default [{
   name: 'Real-life examples',
   children: [{
     name: 'Reflect user location',
-    to: 'samples/reflect-user-location',
+    to: 'sample-reflect-user-location',
   }, {
     name: 'Series markers & regions',
-    to: 'samples/series-markers-regions',
+    to: 'sample-series-markers-regions',
   }, {
     name: 'Vue.js example',
-    to: 'samples/vuejs-example',
-  },]
+    to: 'sample-vuejs-example',
+  }]
 }, {
   name: 'Useful links',
   children: [{
@@ -75,7 +75,7 @@ export default [{
     external: true
   },  {
     name: 'Docs source code',
-    to: 'https://github.com/themustafaomar/jsvectormap',
+    to: 'https://github.com/themustafaomar/jvm-docs',
     external: true
   }, {
     name: 'Start on Github',

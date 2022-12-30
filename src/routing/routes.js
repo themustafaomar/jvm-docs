@@ -18,7 +18,7 @@ export default [
     .flatMap((g) => g.children.filter((item) => !item.external))
     .map((page) => ({
       path: `/docs/${page.to}`,
-      component: () => import(/* @vite-ignore */ `..\/..\/docs/${page.to}.md`),
+      component: () => import(`../../docs/${page.to}.md`),
       meta: { section: page.section },
     })),
   {
