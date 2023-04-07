@@ -3,7 +3,20 @@ title: 'Changelog'
 description: Discover all the release notes for the Jsvectormap.
 ---
 
-## v1.5.1 (latest)
+## v1.5.2 (latest)
+
+- fix(markers): get/clear selected markers
+- fix: series doesn't receive markers nor regions
+- fix(events): tooltip fails when it's disabled ([#117](https://github.com/themustafaomar/jsvectormap/issues/117))
+- perf: massively improves performance when not using labels ([#115](https://github.com/themustafaomar/jsvectormap/pull/115))
+- style: replace let with const for the sake of consistency
+- refactor: abstract the zoom handlers
+- style: replace let with const
+- style: imporve variable declaration
+- fix: zoom on mobile ([#104](https://github.com/themustafaomar/jsvectormap/issues/104))
+- refactor: replace jsvectormap.js with index.js
+
+## v1.5.1
 
 - fix: region label fails ([#92](https://github.com/themustafaomar/jsvectormap/issues/92))
 - fix: add ability to customize circled markers ([#97](https://github.com/themustafaomar/jsvectormap/discussions/97))
