@@ -3,7 +3,11 @@ title: 'Changelog'
 description: Discover all the release notes for the Jsvectormap.
 ---
 
-## v1.5.2 (latest)
+## v1.5.3  (latest)
+
+- fix: dragging doesn't work on mobile devices ([#126](https://github.com/themustafaomar/jsvectormap/issues/126))
+
+## v1.5.2
 
 - fix(markers): get/clear selected markers
 - fix: series doesn't receive markers nor regions
