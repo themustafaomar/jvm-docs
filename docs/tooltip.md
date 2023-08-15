@@ -45,7 +45,7 @@ const map = new jsVectorMap({
   onRegionTooltipShow(event, tooltip, code) {
     tooltip.text(
       `<h5>${tooltip.text()} - Country</h5>` +
-      `<p class="text-xs">This message is gonna appear when hovering over every single reion.</p>`,
+      `<p class="text-xs">This message is gonna appear when hovering over every single region.</p>`,
       true // Enables HTML
     )
   }
