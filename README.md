@@ -1,3 +1,5 @@
 # Jsvectormap documentation
 
-Caught an error or typo don't hesitate to send pull request :]
+⚠️ This repository is archived.
+
+The documentation website has been moved to: https://github.com/themustafaomar/jsvectormap/tree/main/docs
